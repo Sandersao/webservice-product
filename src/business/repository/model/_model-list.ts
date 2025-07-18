@@ -1,6 +1,11 @@
-import { Test } from "./test";
-
+import { Price } from "./price";
+import { PriceExclusion } from "./price-exclusion";
+import { Product } from "./product";
+import { ProductExclusion } from "./product-exclusion";
 
 export const modelList = [
-    Test
+    Product,
+    ProductExclusion,
+    PriceExclusion,
+    Price,
 ]
