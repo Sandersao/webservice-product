@@ -1,4 +1,4 @@
-import { Test } from "src/business/repository/model/test"
+import { Test } from "src/model/test"
 import { PromiseInterruptionException } from "src/exeption/promise-interruption.exception"
 import { makeConfigSystem } from "src/system/config.system"
 import { makeTextTransformSystem } from "src/system/text-transform.sysem"

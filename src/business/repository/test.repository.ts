@@ -1,12 +1,12 @@
 import { In, Like, Repository } from 'typeorm'
-import { Test } from './model/test'
+import { Test } from '../../model/test'
 import { Injectable } from '@nestjs/common'
 import { makeConfigSystem } from 'src/system/config.system'
-import { TestListRequest } from 'src/controller/request/test-list.request'
-import { TestInsertRequest } from 'src/controller/request/test-insert.request'
-import { TestUpdateRequest } from 'src/controller/request/test-update.request'
-import { TestDeleteRequest } from 'src/controller/request/test-delete.request'
-import { TestSelectOneRequest } from 'src/controller/request/test-select-one.request copy'
+import { TestListRequest } from 'src/request/test-list.request'
+import { TestInsertRequest } from 'src/request/test-insert.request'
+import { TestUpdateRequest } from 'src/request/test-update.request'
+import { TestDeleteRequest } from 'src/request/test-delete.request'
+import { TestSelectOneRequest } from 'src/request/test-select-one.request copy'
 import { makeTextTransformSystem } from 'src/system/text-transform.sysem'
 
 @Injectable()

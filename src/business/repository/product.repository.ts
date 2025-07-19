@@ -1,14 +1,14 @@
 import { In, Like, Repository } from 'typeorm'
-import { Product } from './model/product'
+import { Product } from '../../model/product'
 import { Injectable } from '@nestjs/common'
 import { makeConfigSystem } from 'src/system/config.system'
 import { makeTextTransformSystem, TextTransformSystem } from 'src/system/text-transform.sysem'
-import { ProductSelectRequest } from 'src/controller/request/product/product-select.request'
-import { ProductSelectOneRequest } from 'src/controller/request/product/product-select-one.request copy'
-import { ProductInsertRequest } from 'src/controller/request/product/product-insert.request'
-import { ProductUpdateRequest } from 'src/controller/request/product/product-update.request'
-import { ProductDeleteRequest } from 'src/controller/request/product/product-delete.request'
-import { ProductExclusion } from './model/product-exclusion'
+import { ProductSelectRequest } from 'src/request/product/product-select.request'
+import { ProductSelectOneRequest } from 'src/request/product/product-select-one.request copy'
+import { ProductInsertRequest } from 'src/request/product/product-insert.request'
+import { ProductUpdateRequest } from 'src/request/product/product-update.request'
+import { ProductDeleteRequest } from 'src/request/product/product-delete.request'
+import { ProductExclusion } from '../../model/product-exclusion'
 
 @Injectable()
 export class ProductRepository {

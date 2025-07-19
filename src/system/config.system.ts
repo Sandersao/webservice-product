@@ -2,7 +2,7 @@ import { INestApplication } from "@nestjs/common";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import { config } from "dotenv";
 import { dataInitialization } from "src/business/adapter/data-initialization/_data-initialization";
-import { modelList } from "src/business/repository/model/_model-list";
+import { modelList } from "src/model/_model-list";
 import { DataSource, DataSourceOptions } from "typeorm";
 config()
 
@@ -16,7 +16,8 @@ export class ConfigSystem {
     public description: string = process.env.DISCRIPTION ?? 'A test discription'
     public tagList: Array<string> = process.env.TAG_LIST?.split(',') ?? ['test', 'poc']
 
-    public databasePath: string = process.env.DATABASE_PATH ?? `${__dirname}/../../database/database.sqlite`
+    public databasePath: string = process.env.DATABASE_PATH ?? `${__dirname}/../../database/`
+    public databaseFile: string = process.env.DATABASE_FILE ?? `database.sqlite`
 
     private dataSource: DataSource
     private application: INestApplication<any>
@@ -64,7 +65,7 @@ export class ConfigSystem {
         if (!this.dataSource) {
             let databseOption: DataSourceOptions = {
                 type: 'sqlite',
-                database: this.databasePath,
+                database: this.databasePath + this.databaseFile,
                 entities: [...modelList],
                 synchronize: !this.productionMode,
                 logging: !this.productionMode

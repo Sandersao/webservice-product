@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { TestRepository } from "./repository/test.repository";
-import { TestListRequest } from "src/controller/request/test-list.request";
-import { TestInsertRequest } from "src/controller/request/test-insert.request";
-import { TestUpdateRequest } from "src/controller/request/test-update.request";
-import { TestDeleteRequest } from "src/controller/request/test-delete.request";
+import { TestListRequest } from "src/request/test-list.request";
+import { TestInsertRequest } from "src/request/test-insert.request";
+import { TestUpdateRequest } from "src/request/test-update.request";
+import { TestDeleteRequest } from "src/request/test-delete.request";
 import { NoContentException } from "src/exeption/no-content.exception";
 
 @Injectable()

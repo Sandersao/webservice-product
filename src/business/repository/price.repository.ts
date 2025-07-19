@@ -1,13 +1,13 @@
 import { Between, In, LessThanOrEqual, MoreThanOrEqual, Repository } from 'typeorm'
-import { Price } from './model/price'
+import { Price } from '../../model/price'
 import { Injectable } from '@nestjs/common'
 import { makeConfigSystem } from 'src/system/config.system'
-import { PriceSelectRequest } from 'src/controller/request/price/price-select.request'
-import { PriceSelectOneRequest } from 'src/controller/request/price/price-select-one.request copy'
-import { PriceInsertRequest } from 'src/controller/request/price/price-insert.request'
-import { PriceUpdateRequest } from 'src/controller/request/price/price-update.request'
-import { PriceDeleteRequest } from 'src/controller/request/price/price-delete.request'
-import { PriceExclusion } from './model/price-exclusion'
+import { PriceSelectRequest } from 'src/request/price/price-select.request'
+import { PriceSelectOneRequest } from 'src/request/price/price-select-one.request copy'
+import { PriceInsertRequest } from 'src/request/price/price-insert.request'
+import { PriceUpdateRequest } from 'src/request/price/price-update.request'
+import { PriceDeleteRequest } from 'src/request/price/price-delete.request'
+import { PriceExclusion } from '../../model/price-exclusion'
 
 @Injectable()
 export class PriceRepository {

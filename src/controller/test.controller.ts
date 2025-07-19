@@ -1,11 +1,11 @@
 import { Controller, Delete, Get, Post, Put, Query, ValidationPipe } from "@nestjs/common";
 import { TestBusiness } from "src/business/test.business";
 import { BodyResponseSystem } from "../system/body-response.system";
-import { TestListRequest } from "./request/test-list.request";
-import { TestInsertRequest } from "./request/test-insert.request";
-import { TestUpdateRequest } from "./request/test-update.request";
-import { TestDeleteRequest } from "./request/test-delete.request";
-import { TestResponse } from "./response/test.response";
+import { TestListRequest } from "src/request/test-list.request";
+import { TestInsertRequest } from "src/request/test-insert.request";
+import { TestUpdateRequest } from "src/request/test-update.request";
+import { TestDeleteRequest } from "src/request/test-delete.request";
+import { TestResponse } from "../response/test.response";
 
 @Controller('test')
 export class TestController {
